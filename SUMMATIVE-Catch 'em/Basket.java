@@ -15,6 +15,11 @@ public class Basket extends Actor
     //act method - loops when the run button is pressed
     public void act()
     {
-        
+        if (Greenfoot.isKeyDown("d")){
+            setLocation(getX()+10, getY());
+        }
+        if (Greenfoot.isKeyDown("a")){
+            setLocation(getX()-10, getY());
+        }
     }
 }

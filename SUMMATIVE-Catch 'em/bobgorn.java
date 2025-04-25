@@ -15,5 +15,10 @@ public class bobgorn extends Actor
     public void act()
     {
         // Add your action code here.
+        setLocation(getX(), getY()+2);
+        if (isTouching(Basket.class)){
+            MyWorld.score++;
+            
+        }
     }
 }

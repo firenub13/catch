@@ -12,6 +12,7 @@ public class MyWorld extends World
     GreenfootSound jockey = new GreenfootSound("jockey.mp3");
     int chickenDone = 0;
     int chickenStarted = 0;
+    static int score = 0;
     //Constructor for the MyWorld
         //code that is run when the program starts
     public MyWorld()
@@ -25,6 +26,23 @@ public class MyWorld extends World
     //act method - loops when the run button is pressed
     public void act(){
         //add actors here
+        if (chickenDone == 1){
+            if (Greenfoot.getRandomNumber(2)==1){
+                addObject(new bobgorn(), 1+Greenfoot.getRandomNumber(998), 0);
+            }
+            if (Greenfoot.getRandomNumber(2)==1){
+                addObject(new child(), 1+Greenfoot.getRandomNumber(998), 0);
+            }
+            if (Greenfoot.getRandomNumber(2)==1){
+                addObject(new bubget(), 1+Greenfoot.getRandomNumber(998), 0);
+            }
+            if (Greenfoot.getRandomNumber(2)==1){
+                addObject(new chimken(), 1+Greenfoot.getRandomNumber(998), 0);
+            }
+            if (Greenfoot.getRandomNumber(2)==1){
+                addObject(new gaborn(), 1+Greenfoot.getRandomNumber(998), 0);
+            }
+    }
         if (chickenStarted == 0){
             chickenStarted = 1;
             jockey.play();
