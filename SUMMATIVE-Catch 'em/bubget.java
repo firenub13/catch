@@ -15,6 +15,13 @@ public class bubget extends Actor
     public void act()
     {
         // Add your action code here.
-        setLocation(getX(), getY()+2);
+        setLocation(getX(), getY()+3);
+        if (getY()>745){
+            MyWorld.misses++;
+            getWorld().removeObject(this);
+        }else if (isTouching(Basket.class)){
+            MyWorld.score++;
+            getWorld().removeObject(this);
+        }
     }
 }

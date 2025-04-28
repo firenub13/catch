@@ -16,9 +16,12 @@ public class bobgorn extends Actor
     {
         // Add your action code here.
         setLocation(getX(), getY()+2);
-        if (isTouching(Basket.class)){
+        if (getY()>745){
+            MyWorld.misses++;
+            getWorld().removeObject(this);
+        }else if (isTouching(Basket.class)){
             MyWorld.score++;
-            
+            getWorld().removeObject(this);
         }
     }
 }
